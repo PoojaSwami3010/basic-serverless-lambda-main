@@ -19,6 +19,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: npm install
+      build: 
+        commands: 
+          - npm install
+          - npm install serverless-http
+          - npm install express
     - name: serverless deploy
       uses: serverless/github-action@master
       with:
