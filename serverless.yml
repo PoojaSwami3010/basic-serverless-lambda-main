@@ -8,7 +8,10 @@ provider:
 
 functions:
   generateRandomNumber:
-    handler: src/app.generateRandomNumber
+    handler: lambda.handler
+    events:
+      - http: ANY /
+      - http: ANY /{proxy+}
 
 
 # functions:
