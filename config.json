@@ -1,0 +1,6 @@
+{
+  "AWS_ID":"AKIAXC3J43NQP6RLXMPJ",
+  "AWS_SECRET":"HBT9voMZNuSkd7GMGnLLciy1k3b2fBNi/reCDjo8",
+  "AWS_S3_BUCKET_NAME":"s3-with-lambda-upload-example",
+  "REGION":"ap-south-1"
+}
