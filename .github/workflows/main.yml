@@ -22,10 +22,7 @@ jobs:
     - name: Install dependencies
       run: npm ci
     - name: npm install
-      run: 
-        - npm install
-        - npm install serverless-http
-        - npm install express
+      run: npm install
     - name: serverless deploy
       uses: serverless/github-action@master
       with:
