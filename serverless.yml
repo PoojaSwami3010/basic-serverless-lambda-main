@@ -7,9 +7,14 @@ provider:
   region: ap-south-1
 
 functions:
-  api:
-    handler: lambda.handler
-    events:
-      - http: ANY /
-      - http: ANY /{proxy+}
+  generateRandomNumber:
+    handler: src/handler.generateRandomNumber
+
+
+# functions:
+#   api:
+#     handler: lambda.handler
+#     events:
+#       - http: ANY /
+#       - http: ANY /{proxy+}
 
