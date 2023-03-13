@@ -19,10 +19,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Show default environment variables
-        run: 
-          echo "${{ secrets.AWS_ACCESS_KEY_ID }}"
-          echo "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+    - name: npm install
+        env: 
+          CI: true
+        run:
+          npm ci
+          npm i
     - name: serverless deploy
       uses: serverless/github-action@master
       with:

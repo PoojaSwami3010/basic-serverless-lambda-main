@@ -1,8 +1,10 @@
-'use strict';
+const express=require('express')
+const serverless=require('serverless-http')
+const app=express()
 
 
-module.exports.generateRandomNumber = event => {
-  const randomNumber = parseInt(Math.random() * 100);
-  console.log("The random generated integer is: ", randomNumber);
-  return randomNumber;
-};
+app.get('/hello',(req,res)=>{
+    res.send("hello world app lambda and github using aws")
+});
+
+module.exports=serverless(app)
