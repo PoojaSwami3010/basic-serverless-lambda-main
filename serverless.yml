@@ -1,10 +1,10 @@
-service: basic-serverless-lambda
+service: basic-serverless-lambda-github
 
 provider:
   name: aws
   runtime: nodejs12.x
   stage: dev
-  region: us-west-1
+  region: ap-south-1
 
 functions:
   hello:
