@@ -6,18 +6,12 @@ provider:
   stage: dev
   region: ap-south-1
 
+
 functions:
   api:
     handler: lambda.handler
     events:
       - http: ANY /
       - http: ANY /{proxy+}
-
-# functions:
-#   api:
-#     handler: lambda.handler
-#     events:
-#       - http: ANY /
-#       - http: ANY /{proxy+}
 
 
