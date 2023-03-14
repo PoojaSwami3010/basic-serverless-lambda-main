@@ -12,8 +12,7 @@ functions:
     events:
       - http: ANY /
       - http: ANY /{proxy+}
-
-
+  
 # functions:
 #   api:
 #     handler: lambda.handler
