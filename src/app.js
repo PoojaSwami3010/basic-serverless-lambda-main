@@ -7,10 +7,11 @@ const port = process.env.PORT || 4000
 
 app.use(userRouter);
 
-// app.get('/hello',(req,res)=>{
-//     res.send("hello world app lambda and github using aws and It's working fine")
-// });
+app.get('',(req,res)=>{
+    res.send("hello world app lambda and github using aws and It's working fine")
+});
 
+console.log("in app")
 module.exports=app
 
 // app.listen(port, () => {

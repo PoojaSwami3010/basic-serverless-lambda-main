@@ -3,6 +3,7 @@ const router = new express.Router()
 const User = require('../models/user-model')
 
 
+
 // create user
 router.post('/user/create', async (req, res) => {
   const user = new User(req.body)
@@ -17,6 +18,7 @@ router.post('/user/create', async (req, res) => {
 
 // get all users
 router.get('/getAllUsers', async (req, res) => {
+  console.log("in get all users")
   try {
     const users = await User.find();
     res.status(202).send(users)
