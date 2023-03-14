@@ -2,7 +2,7 @@ service: basic-serverless-lambda-github
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   stage: dev
   region: ap-south-1
 
