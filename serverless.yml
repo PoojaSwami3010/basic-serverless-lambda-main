@@ -7,16 +7,29 @@ provider:
   region: ap-south-1
 
 functions:
-  generateRandomNumber:
+  api:
     handler: lambda.handler
     events:
       - http: ANY /
       - http: ANY /{proxy+}
-  
+
 # functions:
 #   api:
 #     handler: lambda.handler
 #     events:
 #       - http: ANY /
 #       - http: ANY /{proxy+}
+Outputs:
+  # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
+  # Find out more about other implicit resources you can reference within SAM
+  # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
+  ExpressApi:
+    Description: API Gateway endpoint URL for Prod stage for Express function
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
+  ExpressFunction:
+    Description: Express Lambda Function ARN
+    Value: !GetAtt ExpressFunction.Arn
+  ExpressFunctionIamRole:
+    Description: Implicit IAM Role created for Express function
+    Value: !GetAtt ExpressFunctionRole.Arn
 
