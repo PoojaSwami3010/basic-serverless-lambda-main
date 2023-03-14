@@ -1,5 +1,5 @@
 const express=require('express');
-require('./db/mongoose');
+require('./db/mongooes');
 const userRouter = require('./route/user-route')
 const app=express()
 
@@ -13,6 +13,6 @@ app.use(userRouter);
 
 module.exports=app
 
-// app.listen(port, () => {
-//     console.log("Server is running on ", port)
-// })
+app.listen(port, () => {
+    console.log("Server is running on ", port)
+})
