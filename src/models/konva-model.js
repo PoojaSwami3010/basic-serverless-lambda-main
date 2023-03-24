@@ -7,7 +7,7 @@ const Konva = mongoose.model('Konva-stage', {
     type:String   
   },
   circuitData:{
-    type:Object
+    type:String
   }
 })
 
