@@ -5,6 +5,13 @@ provider:
   runtime: nodejs14.x
   stage: dev
   region: ap-south-1
+  vpc:
+    securityGroupIds:
+      - sg-0f163352ed8a5ce7c
+    subnetIds:
+      - subnet-0441d8c4785f6123d
+      - subnet-0e33ff58ee97867c4
+      - subnet-0ba83aff67f52f18d
 
 functions:
   api:
