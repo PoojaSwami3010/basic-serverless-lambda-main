@@ -21,7 +21,7 @@ router.get('/getAllUsers', async (req, res) => {
   console.log("in get all users")
   try {
     console.log("in try all users")
-   // const users = await User.find();
+   //const users = await User.find();
     res.status(202).send("test")
   } catch (e) {
     console.log("in catch ",e)

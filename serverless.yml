@@ -5,6 +5,10 @@ provider:
   runtime: nodejs14.x
   stage: dev
   region: ap-south-1
+  apiGateway:
+    shouldStartNameWithService: false
+    binaryMediaTypes:
+      - "*/*"
   vpc:
     securityGroupIds:
       - sg-0f163352ed8a5ce7c
