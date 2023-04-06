@@ -24,7 +24,7 @@ jobs:
     - name: npm install
       run: npm install
     - name: serverless deploy
-      uses: serverless/github-action@master
+      uses: serverless/github-action@main
       with:
         args: deploy
       env:
