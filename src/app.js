@@ -23,8 +23,8 @@ app.get('',async(req,res)=>{
     res.send("hello world app lambda and github using aws and It's working fine")
 });
 
-console.log("in app")
-module.exports=app
+console.log("in app testing")
+module.exports=app;
 
 app.listen(port, () => {
     console.log("Server is running on ", port)
