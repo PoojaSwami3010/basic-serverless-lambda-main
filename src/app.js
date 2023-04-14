@@ -19,7 +19,6 @@ app.get('',async(req,res)=>{
     } catch (error) {
         console.log("Failed to connect to DB",error);
     }
-    
     res.send("hello world app lambda and github using aws and It's working fine")
 });
 
